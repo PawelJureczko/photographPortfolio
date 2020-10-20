@@ -1,0 +1,35 @@
+@import "../generic/mixins";
+.image-slider{
+  &__item{
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+    /* Set a specific height */
+    width: auto;
+    height: 100vh;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  &__text{
+    text-align: center;
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  &__arrow-prev{
+    @include arrow();
+    left: 1%;
+  }
+
+  &__arrow-next{
+    @include arrow();
+    right: 1%;
+  }
+
+}

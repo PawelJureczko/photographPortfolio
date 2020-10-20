@@ -1,0 +1,34 @@
+<section class="section section--slider">
+  <div class="image-slider">
+    {% set keys =
+      [
+      {
+        id: '0',
+        title: 'AGATA DUDEK',
+        subtitle: 'FOTOGRAFIA',
+        image: 'https://wokolmotoryzacji.pl/wp-content/uploads/2020/03/A1813694_large-scaled.jpg'
+      },
+      {
+        id: '1',
+        title: 'AGATA DUDEK',
+        subtitle: 'FOTOGRAFIA',
+        image: 'https://www.auto-motor-i-sport.pl/media/lib/2555/2019-audi-r8.jpg'
+      },
+      {
+        id: '2',
+        title: 'AGATA DUDEK',
+        subtitle: 'FOTOGRAFIA',
+        image: 'https://image.ceneostatic.pl/data/products/84634723/i-audi-r8-plus-5-2-v10-610km-ceramic-carbon.jpg'
+      }
+      ]
+
+    %}
+    {% for key in keys %}
+    {% set id = key.id %}
+    {% set title = key.title %}
+    {% set subtitle = key.subtitle %}
+    {% set image = key.image %}
+    {% include 'partials/single-slide.html' %}
+    {% endfor %}
+  </div> <!--image-slider-->
+</section>

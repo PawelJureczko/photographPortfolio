@@ -1,0 +1,137 @@
+@import "../generic/mixins";
+.header {
+  height: 140px;
+  padding-top: 15px;
+  background-color: rgb(247, 249, 250);
+}
+
+.hamburger {
+  position: absolute;
+  right: 14%;
+  &__button {
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+    margin: 0;
+    &:focus{
+      outline: none;
+    }
+    &__box {
+      width: 22px;
+      height: 20px;
+      display: inline-block;
+      position: relative;
+    }
+    &__inner {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include hamburgerInner();
+      &::before {
+        @include hamburgerInner();
+        content:'';
+        left: 0;
+        top: -7px;
+      }
+      &::after {
+        @include hamburgerInner();
+        content:'';
+        left: 0;
+        top: 7px;
+      }
+    }
+  }
+}
+
+.hamburger__menu{
+  display:none;
+  height:0;
+  &__visible{
+    position:absolute;
+    display: block;
+    @media screen and (max-width: 768px){
+      width: 100%;
+      right: 0%;
+    }
+    @media screen and (min-width: 767px){
+      width: 300px;
+      right: 10%;
+    }
+    height: auto;
+    transition: height .3s;
+    z-index: 1;
+    background-color: rgb(247, 249, 250);
+  }
+  &__wrapper{
+    left: 50%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  &__line{
+    line-height: 44px;
+    text-align: center;
+    list-style-type: none;
+  }
+}
+
+.menu {
+  &__link {
+    @include headerLinks();
+    &::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 1px;
+      left: -8px;
+      position: absolute;
+      //background: rgb(7, 7, 7);
+      transition: background-color 0.8s;
+      width: 130%;
+    }
+    &:hover {
+      &::after {
+        width: 130%;
+        left: -8px;
+        background-color: rgb(7, 7, 7);
+      }
+    }
+  }
+  &__item {
+    list-style-type: none;
+  }
+  &-right {
+    padding-right: 65px;
+    padding-left: 70px;
+  }
+  &__logo {
+    height: 90px;
+  }
+}
+
+.sticky{
+  // transition: height  .4s;
+  @media screen and (min-width: 1199px){
+    padding-top: 0px;
+  }
+  @media screen and (max-width: 1199px){
+    padding-top: 10px;
+  }
+  transform: translateY(0px);
+  position: sticky;
+  height: 60px;
+  background-color: rgb(247, 249, 250);
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  &__logo{
+    content:url("../../images/napis.png");
+    max-height: 35px;
+  }
+  &__link{
+    @include headerLinks();
+  }
+}

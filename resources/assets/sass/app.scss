@@ -1,0 +1,33 @@
+@import "settings/variables";
+
+// bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap-grid";
+
+// js plugins
+// @import "../node_modules/magnific-popup/src/css/main.scss";
+// @import "../../../node_modules/slick-carousel/slick/slick.css";
+// @import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+
+// Fonts
+// =================================================
+
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims.scss";
+// Generic
+// =================================================
+@import "./generic/general";
+// Partials
+// =================================================
+@import "./partials/header";
+@import "./partials/footer";
+// Components
+// =================================================
+@import "./components/slider";
+@import "./components/hero";
+@import "./components/histories";
+@import "./components/testimonials";
+@import "./components/parallax";

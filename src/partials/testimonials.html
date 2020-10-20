@@ -1,0 +1,93 @@
+<section class="section testimonials">
+    <h3 class="col-12 testimonials">WASZE OPINIE</h3>
+      <div class="testimonials-slider">
+      {% set keys =
+        [
+        {
+          id: '0',
+          contents: 'Jedyna w swoim rodzaju, niepowtarzalna i wyjątkowo utalentowana.
+          Uwieczniła nasz najważniejszy dzień w taki sposób, że za każdym razem gdy oglądamy zdjęcia, to w oczach mamy łzy szczęścia',
+          author: 'Zuzia Łukasiewicz'
+        },
+        {
+          id: '1',
+          contents: 'Na Agatę trafiliśmy zupełnie przypadkiem i zdecydowanie w ostatnim momencie. Był to strzał w dziesiątkę! Reportaż ślubny oraz sesja plenerowa wyszły fenomenalnie, nie ma osoby która nie byłaby zachwycona zdjęciami z naszego ślubu, mamy przepiękną pamiątkę. Polecamy z całego serca !',
+          author: 'Agata Paluch'
+        },
+        {
+          id: '2',
+          contents: 'Agatę poznaliśmy przez polecenie, ale od razu przypadła nam do gustu. Agata od początku utrzymywała z nami kontakt. Często mailowalysmy, rozmawialiśmy przez telefon a przed ślubem spotkaliśmy się aby lepiej się poznać. Od początku Agata była wszędzie tam gdzie jej potrzebowaliśmy ale nie powodawala z nas sztuczności. Jej zdjęcia z ślubu, wesela i sesji są więcej niż spełnieniem naszych oczekiwan! Jesteśmy zachwyceni efektem, kontaktem i sposobem pracy Agaty. Polecamy wszystkim aby w tak ważnym dniu mieli Agatę przy sobie.
+          Już dziś wiemy, że to nie będzie nasza ostatnia współpraca z Agatą!',
+          author: 'Anna Krukowska'
+        },
+        {
+          id: '3',
+          contents: 'Zdecydowanie polecam każdemu, kto chce mieć wspaniałe, i profesjonalne zdjęcia. Mieliśmy w głowie pewną wizję tego, jak ma wyglądać dokumentacja fotograficzna, jednak autorka nadała temu wszystkiemu kształt, przedstawiła swoje pomysły i sugestie. W trakcie uroczystości wszystkie zdjęcia były wykonywane bardzo dyskretnie i nienachalnie. Sama sesja przerosła nasze najśmielsze oczekiwania, wyszło naturalnie i profesjonalnie. Efekt jest zachwycający, zdjęcia będą wspaniałą pamiątką.',
+          author: 'Adam Biały'
+        },
+        {
+          id: '4',
+          contents: 'Zdjęcia są przecudowne, fajny kontakt i pełen profesjonalizm',
+          author: 'Ewelina Arboczius'
+        },
+        {
+          id: '5',
+          contents: 'Przepiękne zdjęcia ! polecamy gorąco!',
+          author: 'Magda Skoczylas'
+        },
+        {
+          id: '6',
+          contents: 'Serdecznie polecam Agatę, wesołą i ambitną Panią fotograf! Zdjęcia ślubne idealnie uchwycone, wyjątkowe i pomysłowe. sama zadbała o urokliwe miejsce na naszą sesję ślubną, a w kościele niezauważalnie wręcz uwieczniła najważniejsze momenty. Efekt końcowy jest rewelacyjny. Już miesiąc po weselu otrzymaliśmy zdjęcia i jesteśmy zachwyceni',
+          author: 'Justyna Szkwarek'
+        },
+        {
+          id: '7',
+          contents: 'Najlepsza fotograf od zadań specjalnych! Bezstresowa i niewymuszona atmosfera na sesji! Polecam cudowna osoba! ',
+          author: 'Aleksandra Qso'
+        },
+        {
+          id: '8',
+          contents: 'Zdjęcia cudowne polecam z całego serca. Współpraca z Panią fotograf to prawdziwa przyjemność. Dzięki niej możemy przenieść się w ten bajkowy dzień raz jeszcze. Dziękujemy!!!',
+          author: 'Sonia Błaszczyk'
+        },
+        {
+          id: '9',
+          contents: 'Polecam z całego serca! Pani Fotograf, po której widać, że kocha swoją pracę:) atmosfera na sesjach pomaga nawet najbardziej zestresowanym osobą',
+          author: 'Ola Rudzinska'
+        },
+        {
+          id: '10',
+          contents: 'Pani fotograf jest ciepłą, otwartą osobą, dzięki czemu czuliśmy się podczas sesji bardzo swobodnie. Wyczarowała wiele pięknych zdjęć, idealnych do pamiątkowego albumu.',
+          author: 'Ewa Osuchowska'
+        },
+        {
+          id: '11',
+          contents: 'Kiedy podjęliśmy decyzję o ślubie od razu wiedzieliśmy, że to Agata będzie robić nam zdjęcia :). Dzięki niej mamy cudowną pamiątkę, która zostanie z nami na lata. Była z nami na sesji narzeczeńskiej, na ślubie i sesji plenerowej. Kiedy trzeba staje się niewidzialna, w innych momentach przejmuje dowodzenie i doskonale radzi sobie nawet z największymi uparciuchami i sztywniakami :). Zawsze służy radą',
+          author: 'Magdalena Podlewska-Pabian'
+        },
+        {
+          id: '12',
+          contents: 'Agata to absolutny strzał w dziesiątkę!
+          Fotograf i czarodziej w jednym - zagospodaruje najbardziej sztywnych i opornych "modeli" ... ;). Atmosfera jest (zawsze) swobodna i bezstresowa. Doskonale radzi sobie w każdych warunkach: fotografując potrafi zarówno zorganizować tłum zdezorientowanych gości jak i stworzyć niewymuszoną, intymną atmosferę do sesji we dwoje (momentami zapominaliśmy o obiektywie w nas "wycelowanym" :). Doceniamy też przede wszystkim za szeroki uśmiech, wielkie wsparcie, ogromne zaangażowanie i duuuużo luzu tak potrzebnego każdej parze młodej w dniu ślubu.',
+          author: 'Ola Hantkiewicz-Lejman'
+        },
+        {
+          id: '13',
+          contents: 'Jedna z najfajniejszych osób, jakie poznałam przez ostatnie lata i zdecydowanie w czołówce najzdolniejszych! Robi magiczne zdjęcia, potrafi uchwycić w punkt przepiękne kadry, jest mistrzem dbania o najdrobniejsze szczegóły i zawsze daje z siebie 300%! Sesja z Agatą to czysta przyjemność i piękne pamiątki na całe życie ',
+          author: 'Aneta Pomieczyńska'
+        },
+        {
+          id: '14',
+          contents: ' Zdjecia wyszly przepieknie - swietne kadry, kolorystyka i co najwazniejsze - wszystkie wazne dla nas momenty. Sesja w plenerze odbywala się w sposob naturalny, niewymuszony - tak jak chcielismy ',
+          author: 'Katarzyna Czajkowska'
+        }
+        ]
+      %}
+      {% for key in keys %}
+      {% set id = key.id %}
+      {% set contents = key.contents %}
+      {% set author = key.author %}
+      {% include 'partials/single-testimonial.html' %}
+      {% endfor %}
+    </div> <!--testimonials-slider-->
+</section>

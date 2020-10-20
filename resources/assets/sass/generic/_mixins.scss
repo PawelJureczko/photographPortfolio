@@ -1,0 +1,85 @@
+@mixin fontSize($size) {
+  $root: 16;
+
+  font-size: $size/$root + rem;
+}
+
+@mixin arrow(){
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  top: 40%;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: 200;
+  transition: opacity .3s , font-size .3s;
+  &:hover{
+    opacity: 50%;
+    font-size: 150%;
+  }
+}
+
+@mixin fonts($h1, $h2, $h3, $h4, $p){
+  h1 {
+    @include fontSize($h1);
+    font-family: $font-secondary;
+    font-weight: 300;
+    margin-top:0px;
+    margin-bottom:0px;
+  }
+  h2 {
+    @include fontSize($h2);
+    font-family: $font-secondary;
+    font-weight: 400;
+    margin-top:-10px;
+    margin-bottom:0px;
+  }
+  h3 {
+    @include fontSize($h3);
+    font-family: $font-secondary;
+    font-weight: 300;
+    margin-top:-10px;
+    margin-bottom:0px;
+  }
+  h4 {
+    @include fontSize($h4);
+    font-family: $font-secondary;
+    font-weight: 300;
+    margin-top:-10px;
+    margin-bottom:0px;
+  }
+  p {
+    @include fontSize($p);
+    font-family: $font-primary;
+    font-weight: 300;
+  }
+}
+
+@mixin socialMediaIcons(){
+  opacity: 0.5;
+  transition: opacity 0.5s;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+@mixin headerLinks(){
+  text-decoration: none;
+  font-family: $font-primary;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #3c454e;
+  @include fontSize(15);
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+@mixin hamburgerInner(){
+  width: 100%;
+  height: 0.3px;
+  background-color: #8d856b;
+  position: absolute;
+}

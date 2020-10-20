@@ -1,0 +1,41 @@
+<section class="section histories">
+  <div class="container">
+    <div class="row">
+        {% set keys =
+            [
+            {
+              id: '0',
+              title: 'FOTOGRAFIA ŚLUBNA',
+              image: 'https://wokolmotoryzacji.pl/wp-content/uploads/2020/03/A1813694_large-scaled.jpg',
+              link: '#'
+            },
+            {
+              id: '1',
+              title: 'HISTORIE MIŁOSNE',
+              image: 'https://www.auto-motor-i-sport.pl/media/lib/2555/2019-audi-r8.jpg',
+              link: '#'
+            },
+            {
+              id: '2',
+              title: 'FOTOGRAFIA EVENTOWA',
+              image: 'https://image.ceneostatic.pl/data/products/84634723/i-audi-r8-plus-5-2-v10-610km-ceramic-carbon.jpg',
+              link: '#'
+            },
+            {
+              id: '3',
+              title: 'FOTOGRAFIE SPORTOWE I WIZERUNKOWE',
+              image: 'https://image.ceneostatic.pl/data/products/84634723/i-audi-r8-plus-5-2-v10-610km-ceramic-carbon.jpg',
+              link: '#'
+            }
+            ]
+          %}
+          {% for key in keys %}
+          {% set id = key.id %}
+          {% set title = key.title %}
+          {% set image = key.image %}
+          {% set link = key.link %}
+          {% include 'partials/single-history.html' %}
+          {% endfor %}
+      </div>
+  </div>
+</section>

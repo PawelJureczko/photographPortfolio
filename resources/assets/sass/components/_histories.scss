@@ -1,0 +1,95 @@
+.histories {
+  margin-bottom: 100px;
+  &__image {
+    height: 41vh;
+    margin-top: 33px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: filter 1s;
+    &:hover{
+      filter: brightness(80%);
+    }
+    &:hover .histories__text{
+      bottom: 14%;
+    }
+    &:hover .histories__underline{
+      opacity: 1;
+      left: 0;
+      width: 70%;
+    }
+  }
+  &__text {
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: bottom .3s;
+    color: white;
+  }
+  &__underline {
+    position: absolute;
+    display: block;
+    bottom: 10%;
+    width: 0%;
+    left: 50%;
+    margin-left: 15%;
+    background-color: white;
+    height: 1px;
+    opacity: 0;
+    transition: width .3s, left .3s;
+  }
+}
+
+// .histories {
+//   margin-bottom: 10vh;
+//   &__image {
+//     /* Set a specific height */
+//     height: 41vh;
+//     margin-top: 33px;
+//     /* Position and center the image to scale nicely on all screens */
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     position: relative;
+//     transition: filter 1s;
+//     &:hover{
+//       filter: brightness(80%);
+//     }
+//     &:hover .histories__text{
+//       padding-bottom: 30px;
+//       &::after {
+//         left: 15%;
+//         width: 70%;
+//         background-color: rgb(255, 255, 255);
+//       }
+//     }
+//   }
+//   /* Place text in the middle of the image */
+//   &__text {
+//     text-align: center;
+//     position: relative;
+//     top: 80%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     transition: padding 1s;
+//     color: white;
+//     &::after {
+//       background: none repeat scroll 0 0 transparent;
+//       bottom: 0;
+//       content: "";
+//       display: block;
+//       height: 1px;
+//       left: -8px;
+//       position: absolute;
+//       transition: background-color 0.5s;
+//       left: 15%;
+//       width: 70%;
+//     }
+//   }
+// }
