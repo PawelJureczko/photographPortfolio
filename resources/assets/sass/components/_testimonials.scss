@@ -19,12 +19,14 @@
     @include fontSize(12);
     color: grey;
     &__dots{
+      text-align: center;
       margin-top: 0;
       margin-bottom: 0;
       font-size: 40px;
       opacity: 0.5
     }
     &__author{
+      text-align: center;
       font-weight: 300;
       letter-spacing: 0.9px;
       margin-bottom: 0;
@@ -33,7 +35,7 @@
       padding-left: 15px;
       padding-right: 15px;
       width: 100%;
-      line-height: 45px;
+      line-height: 43px;
       background-image: repeating-linear-gradient(180deg, transparent, transparent 42px, rgba(0, 0, 0, 0.103) 42px, rgba(0, 0, 0, 0.103) 43px);
     }
     &:before{
@@ -54,12 +56,44 @@
       padding: 1rem 0;
       list-style-type: none;
       li {
-        margin: 0 0.5rem;
+        @media screen and (min-width: 1200px){
+          margin: 0 0.5rem;
+        }
+        @media screen and (max-width: 1200px){
+          margin: 0 0.4rem;
+        }
+        @media screen and (max-width: 960px){
+          margin: 0 0.3rem;
+        }
+        @media screen and (max-width: 720px){
+          margin: 0 0.2rem;
+        }
+        @media screen and (max-width: 576px){
+          margin: 0 0.2rem;
+        }
       }
       button {
         display: block;
-        width: .8rem;
-        height: .8rem;
+        @media screen and (min-width: 1200px){
+          width: .8rem;
+          height: .8rem;
+        }
+        @media screen and (max-width: 1200px){
+          width: .7rem;
+          height: .7rem;
+        }
+        @media screen and (max-width: 960px){
+          width: .6rem;
+          height: .6rem;
+        }
+        @media screen and (max-width: 720px){
+          width: .5rem;
+          height: .5rem;
+        }
+        @media screen and (max-width: 576px){
+          width: .4rem;
+          height: .4rem;
+        }
         padding: 0;
         border: none;
         border-radius: 100%;
@@ -76,4 +110,3 @@
     }
   }
 }
-
